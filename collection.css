@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - Doubt Dekho</title>
+    <link rel="stylesheet" href="collection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- NavBar -->
+    <div id="navbar">
+        <img src="logo.jpeg" id="image" alt="Doubt Dekho" href="index.html">
+        <a id="name" href="index.html">Doubt Dekho</a>
+        <input id="search" placeholder="Search for topics..." onkeypress="redirectToResultsPage(event)">
+        <p class="navbar-items" id="all-topics" onclick="displayAllTopics()">Topics</p>
+        <p class="navbar-items" id="all-categories" onclick="displayAllCategories()">Categories</p>
+        <a class="navbar-items" href="profile.html">Profile</a>
+        <a class="navbar-items" href="login.html">Login</a>
+        <a class="navbar-items" id="contact">Contact Us</a>
+        <div class="dropdown">
+            <i class="fa-regular fa-user" id="user-icon"></i>
+            <div class="dropdown-content">
+                <a href="ask-question.html">Ask a Question</a>
+                <a href="upload-content.html">Upload Content</a>
+                <a href="learn.html">Learn</a>
+                <a href="#support">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Image -->
+    <div id="top-image">
+        <img src="background.jpg" id="cover-image" alt="Collection Background">
+    </div>
+
+    <div class="info">
+        <h1 id="collection-name">Collection Name</h1>
+        <p id="collection-info">Description of the collection goes here.</p>
+        <div id="collection-description">
+            <p>Detailed description of the collection, its significance, and other relevant information.</p>
+        </div>
+        <p id="collection-numbers">Total Topics: <span id="total-topics">0</span></p>
+    </div>
+
+    <button class="items" onclick="displayTopicsInCollection()">Topics in this collection</button>
+    <div id="topic-grid"></div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <!-- Subjects Section -->
+        <div class="footer-section">
+            <h3>Subjects</h3>
+            <ul>
+                <li><a href="biology.html">Biology</a></li>
+                <li><a href="chemistry.html">Chemistry</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="mathematics.html">Mathematics</a></li>
+            </ul>
+        </div>
+
+        <!-- Learn Section -->
+        <div class="footer-section">
+            <h3>Learn More</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=NNQLJcJEzv0">What is an Online Course?</a></li>
+                <li><a href="https://www.youtube.com/watch?v=SQyg9pyJ1Ac">How to Study Effectively?</a></li>
+                <li><a href="https://www.youtube.com/watch?v=1YyAzVmP9xQ">Understanding Learning Styles</a></li>
+                <li><a href="https://www.youtube.com/watch?v=KTZDEwF55ts">Tips for Online Learning</a></li>
+                <li><a href="https://www.youtube.com/watch?v=yubzJw0uiE4">How to Stay Motivated?</a></li>
+            </ul>
+        </div>
+
+        <!-- Doubt Dekho Section -->
+        <div class="footer-section">
+            <img src="logo.jpeg" height="50px" width="50px" alt="D oubt Dekho Logo">
+            <h3>Doubt Dekho</h3>
+            <p>Welcome to Doubt Dekho, your go-to platform for resolving academic queries and enhancing your learning experience. Whether you're a student seeking help or an educator sharing knowledge, we provide a collaborative space for all.</p>
+            <p>Need assistance?</p>
+            <p id="support">Contact support:</p>
+            <p>Mobile: 1234567890</p>
+            <p>Email: support@doubtedikho.com</p>
+        </div>
+    </div>
+
+    <script type="module" src="collection.js"></script>
+    <script src="main_page.js"></script>
+</body>
+</html>
