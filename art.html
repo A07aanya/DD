@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Dekho - Your Learning Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="education-page">
+    <div id="navbar">
+        <img src="logo.png" id="logo" alt="Doubt Dekho" href="index.html">
+        <a id="site-name" href="index.html">Doubt Dekho</a>
+        <input id="search" placeholder="  Search for topics..." onkeypress="redirectToResultsPage(event)">
+        <p class="navbar-items" id="all-topics" onclick="displayAllTopics()">Topics</p>
+        <p class="navbar-items" id="all-categories" onclick="displayAllCategories()">Categories</p>
+        <a class="navbar-items" href="profile.html">Profile</a>
+        <a class="navbar-items" href="login.html">Login</a>
+        <a class="navbar-items" id="contact">Contact Us</a>
+        <div class="dropdown">
+            <i class="fa-regular fa-user" id="user-icon"></i>
+            <div class="dropdown-content">
+                <a href="ask-question.html">Ask a Question</a>
+                <a href="upload-content.html">Upload Content</a>
+                <a href="learn.html">Learn</a>
+                <a href="#support">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <!--CATEGORY SECTION-->
+    <div class="category">
+        <p id="all"><a href="index.html">All</a></p>
+        <p id="math"><a href="#">Mathematics</a></p>
+        <p id="physics"><a href="#">Physics</a></p>
+        <p id="chemistry"><a href="#">Chemistry</a></p>
+        <p id="biology"><a href="#">Biology</a></p>
+    </div>
+
+    <div class="main-scroll-div">
+        <div>
+            <button class="icon" onclick="scrollLeft()"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+        <div class="cover">
+            <div class="scroll-images"></div>
+        </div>
+        <div>
+            <button class="icon" onclick="scrollRight()"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!--TOP CATEGORIES-->
+    <div class="headings">
+        <p>Top Learning Categories</p>
+    </div>
+    <div class="main-scroll-div">
+        <div>
+            <button class="icon" onclick="TCscrollLeft()"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+        <div class="top-learning-categories"></div>    
+        <div>
+            <button class="icon" onclick="TCscrollRight()"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!--TRENDING TOPICS-->
+    <div class="headings">
+        <p>Trending Topics</p>
+    </div>
+
+    <div class="main-scroll-div">
+        <div>
+            <button class="icon" onclick="TscrollLeft()"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+        <div class="trending-topics"></div>    
+        <div>
+            <button class="icon" onclick="TscrollRight()"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer-container">
+        <!-- Resources Section -->
+        <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">Study Materials</a></li>
+                <li><a href="#">Video Lectures</a></li>
+                <li><a href="#">Practice Questions</a></li>
+                <li><a href="#">Webinars</a></li>
+            </ul>
+        </div>
+        <!-- Contact Section -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:hr@doubtdekho.com">hr@doubtdekho.com</a></p>
+            <p>Phone: <a href="tel:+918235239482">+91 82352 39482</a></p>
+        </div>
+        <!-- Social Media Section -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
