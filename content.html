@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Doubts and Solutions</title>
+    <link rel="stylesheet" href="specific_category.css">
+    <link rel="stylesheet" href="main_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="doubt-page">
+    <div id="navbar">
+        <i id="image" class="fa-brands fa-mintbit fa-flip-horizontal"></i>
+        <a id="name" href="index.html">Doubt Dekho</a>
+        <input id="search" placeholder="  Search for doubts..." onkeypress="redirectToResultsPage(event)">
+        <p class="navbar-items" id="all-doubts" onclick="displayAllDoubts()">Doubts</p>
+        <p class="navbar-items" id="all-collections" onclick="displayAllCollections()">Collections</p>
+        <a class="navbar-items" href="profile.html">Profile</a>
+        <a class="navbar-items" id="login">Login</a>
+        <a class="navbar-items" id="wallet">Connect Wallet</a>
+        <div class="dropdown">
+            <i class="fa-regular fa-user" id="user-icon"></i>
+            <div class="dropdown-content">
+                <a href="askQuestion.html">Ask a Question</a>
+                <a href="uploadAnswer.html">Upload Answer</a>
+                <a href="learn.html">Learn</a>
+                <a href="#support">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <!--CATEGORY SECTION-->
+    <div class="category">
+        <p><a href="index.html">All</a></p>
+        <p><a href="math.html">Mathematics</a></p>
+        <p><a href="chemistry.html">Chemistry</a></p>
+        <p><a href="physics.html">Physics</a></p>
+        <p><a href="biology.html">Biology</a></p>
+    </div>
+
+    <!--TOP QUESTIONS-->
+    <div class="headings">
+        <p>Top Questions in Mathematics</p>
+    </div>
+    <div class="main-scroll-div">
+        <div>
+            <button class="icon" onclick="scrollLeft()"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+        <div class="top-questions"></div>
+        <div>
+            <button class="icon" onclick="scrollRight()"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!--TRENDING QUESTIONS-->
+    <div class="headings">
+        <p>Trending Questions</p>
+    </div>
+    <div class="main-scroll-div">
+        <div>
+            <button class="icon" onclick="TGscrollLeft()"><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+        <div class="trending-questions"></div>
+        <div>
+            <button class="icon" onclick="TGscrollRight()"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer-container">
+        <!-- Categories Section -->
+        <div class="footer-section">
+            <h3>Subjects</h3>
+            <ul>
+                <li><a href="math.html">Mathematics</a></li>
+                <li><a href="chemistry.html">Chemistry</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="biology.html">Biology</a></li>
+            </ul>
+        </div>
+
+        <!-- About Doubt Dekho Section -->
+        <div class="footer-section">
+            <h3>About Doubt Dekho</h3>
+            <p>Doubt Dekho is a platform designed to help students clarify their doubts and enhance their understanding of various subjects. We provide a community-driven space where users can ask questions, share answers, and learn collaboratively.</p>
+            <p>For inquiries, you can reach us at <a href="mailto:hr@doubtdekho.com">hr@doubtdekho.com</a> or contact us at +918235239482.</p>
+        </div>
+    </div>
+</body>
+
+</html>
