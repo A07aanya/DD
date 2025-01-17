@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com.firebasejs/11.1.0/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Welcome to Doubt Dekho</h1>
+    <button id="logout-btn">Logout</button>
+    <div id="questions-container">
+      <h2>Your Questions</h2>
+      <!-- Questions will be dynamically loaded here -->
+    </div>
+    <form id="question-form">
+      <input type="text" id="question-input" placeholder="Ask your question..." required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script type="module">
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Logout functionality
+    document.getElementById("logout-btn").addEventListener("click", function() {
+      auth.signOut().then(() => {
+        window.location.href = "login.html"; // Redirect to login page
+      });
+    });
+
+    // Handle question submission
+    document.getElementById("question-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const question = document.getElementById("question-input").value;
+      // Here you would typically send the question to your database
+      console.log("Question submitted:", question);
+      document.getElementById("question-input").value = ""; // Clear input
+    });
+  </script>
+</body>
+</html>
